@@ -3,7 +3,13 @@
 <plugin>
   <!-- To set source path to class path, search "build configuration" in help -->
     <!-- Instantiates ReviewPlugin when workbench starts up -->
-  <extension point="org.eclipse.ui.startup"></extension>
+   <!-- add by chenhuang 2019-10-22 解决 IStartup的earlyStartup()方法不加载导致评审记录不保存到文件问题-->
+  <extension 
+  		id="edu.hawaii.ics.csdl.jupiter.start.ReviewPlugin"
+        name="edu.hawaii.ics.csdl.jupiter.start.ReviewPlugin"
+  		point="org.eclipse.ui.startup">
+  	<startup class="edu.hawaii.ics.csdl.jupiter.ReviewPlugin"></startup>
+  </extension>
   <!-- Registers Code Review Editor table -->
   <extension point="org.eclipse.ui.views">
     <category

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: edu.hawaii.ics.csdl.jupiter
 Bundle-SymbolicName: edu.hawaii.ics.csdl.jupiter;singleton:=true
-Bundle-Version: 4.0.0
+Bundle-Version: 4.0.1
 Bundle-Activator: edu.hawaii.ics.csdl.jupiter.ReviewPlugin
 Bundle-Vendor: Collaborative Software Development Laboratory
 Bundle-Localization: plugin
@@ -53,4 +53,4 @@ Export-Package: edu.hawaii.ics.csdl.jupiter,
  javax.xml.stream,
  javax.xml.stream.events,
  javax.xml.stream.util
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

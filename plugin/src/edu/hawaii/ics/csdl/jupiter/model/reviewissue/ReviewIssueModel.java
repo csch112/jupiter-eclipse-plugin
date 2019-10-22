@@ -30,7 +30,7 @@ public class ReviewIssueModel implements IStructuredContentProvider {
   private JupiterLogger log = JupiterLogger.getLogger();
 
   /** The listener container to contains IReviewIssueModelListener listeners. */
-  private ListenerList listenerList = new ListenerList();
+  private ListenerList<IReviewIssueModelListener> listenerList = new ListenerList<IReviewIssueModelListener>();
   /** The map contains the code review id and it mapped <code>ReviewIssue</code> instance. */
   private Map<String, ReviewIssue> reviewIssueMap = new TreeMap<String, ReviewIssue>();
   /**

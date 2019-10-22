@@ -45,7 +45,7 @@ public class ReviewPlugin extends AbstractUIPlugin implements IStartup {
   /** The <code>ReviewPlugin</code> singleton instance. */
   private static ReviewPlugin plugin;
   /** The listener container to contains IListener listeners. */
-  private ListenerList listenerList = new ListenerList();
+  private ListenerList<IReviewListener> listenerList = new ListenerList<IReviewListener>();
   /** The plug-in id .*/
   public static final String PLUGIN_ID = "edu.hawaii.ics.csdl.jupiter";
   
@@ -91,6 +91,7 @@ public class ReviewPlugin extends AbstractUIPlugin implements IStartup {
    *
    * @see org.eclipse.ui.IStartup#earlyStartup()
    */
+  @Override
   public void earlyStartup() {
     ReviewEditorView.setViewEnable(false);
     // String enableUpdateStoreKey = GeneralPreferencePage.ENABLE_UPDATE_KEY;
